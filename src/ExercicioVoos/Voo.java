@@ -1,3 +1,5 @@
+package ExercicioVoos;
+
 public class Voo {
     private String origem;
     private String destino;

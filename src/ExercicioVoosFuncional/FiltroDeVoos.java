@@ -1,4 +1,4 @@
-package ExercicioVoos;
+package ExercicioVoosFuncional;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,6 +1,7 @@
-package ExercicioVoos;
+package ExercicioVoosArrayList;
 
 public class Voo {
+
     private String origem;
     private String destino;
     private String equipamento;
@@ -33,4 +34,6 @@ public class Voo {
     public String toString() {
         return "Origem: " + origem + ", Destino: " + destino + ", equipamento: " + equipamento + ", Minutos: " + minutosVoo + "\n";
     }
+
+
 }

@@ -1,6 +1,4 @@
-package ExercicioVoos;
-
-import ExercicioVoos.FiltroDeVoos;
+package ExercicioVoosFuncional;
 
 public class Main {
 

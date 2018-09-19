@@ -17,32 +17,16 @@ public class Voo {
         return origem;
     }
 
-    public void setOrigem(String origem) {
-        this.origem = origem;
-    }
-
     public String getDestino() {
         return destino;
-    }
-
-    public void setDestino(String destino) {
-        this.destino = destino;
     }
 
     public String getEquipamento() {
         return equipamento;
     }
 
-    public void setEquipamento(String equipamento) {
-        this.equipamento = equipamento;
-    }
-
     public int getMinutosVoo() {
         return minutosVoo;
-    }
-
-    public void setMinutosVoo(int minutosVoo) {
-        this.minutosVoo = minutosVoo;
     }
 
     @Override

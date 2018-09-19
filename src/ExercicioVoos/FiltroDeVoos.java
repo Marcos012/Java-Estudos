@@ -1,9 +1,17 @@
 package ExercicioVoos;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class FiltroDeVoos {
     ArrayList<Voo> listaVoos = new ArrayList<>();
+
+
+    public void adicionaVoo(Voo voo) {
+        listaVoos.add(voo);
+    }
 
     public ArrayList<Voo> saindoDe(String origem){
         ArrayList<Voo> listaOrigem = new ArrayList<>();
@@ -13,6 +21,15 @@ public class FiltroDeVoos {
             }
         }
         return listaOrigem;
+    }
+
+    public List<Voo> porDuracao(int duracao) {
+
+        Stream<Voo> streamVoos = listaVoos.stream();
+
+        return streamVoos
+                .filter(voo -> voo.getMinutosVoo() == duracao)
+                .collect(Collectors.toList());
     }
 
     public ArrayList<Voo> chegandoEm(String destino){

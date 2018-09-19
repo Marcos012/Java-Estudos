@@ -15,24 +15,22 @@ public class Main {
 
         FiltroDeVoos f = new FiltroDeVoos();
 
-        f.listaVoos.add(v1);
-        f.listaVoos.add(v2);
-        f.listaVoos.add(v3);
-        f.listaVoos.add(v4);
-        f.listaVoos.add(v5);
-        f.listaVoos.add(v6);
+        f.adicionaVoo(v1);
+        f.adicionaVoo(v2);
+        f.adicionaVoo(v3);
+        f.adicionaVoo(v4);
+        f.adicionaVoo(v5);
+        f.adicionaVoo(v6);
 
-        //Filtro por destino
-        System.out.println(f.chegandoEm("SP").toString());
+//        System.out.println(f.chegandoEm("SP").toString());
+//
+//        System.out.println(f.saindoDe("RJ").toString());
+//
+//        System.out.println(f.operadoPor("GOL Bolinha").toString());
+//
+//        System.out.println(f.toString());
 
-        //Filtro por origem
-        System.out.println(f.saindoDe("RJ").toString());
-
-        //Filtro por Equipamento
-        System.out.println(f.operadoPor("GOL Bolinha").toString());
-
-        //Listar todos os voos
-        System.out.println(f.toString());
+        System.out.println(f.porDuracao(98));
 
     }
 }

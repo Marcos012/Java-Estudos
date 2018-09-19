@@ -33,7 +33,7 @@ public class FiltroDeVoos {
         Stream<Voo> listaDestino = listaVoos.stream();
 
         return listaDestino
-                .filter(voo -> voo.getDestino() == destino)
+                .filter(voo -> voo.getDestino().equals(destino))
                 .collect(Collectors.toList());
     }
 
@@ -41,7 +41,7 @@ public class FiltroDeVoos {
         Stream<Voo> listaEquipamento = listaVoos.stream();
 
         return listaEquipamento
-                .filter(voo -> voo.getEquipamento() == equipamento)
+                .filter(voo -> voo.getEquipamento().equals(equipamento))
                 .collect(Collectors.toList());
     }
 

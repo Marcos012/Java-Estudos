@@ -13,43 +13,36 @@ public class FiltroDeVoos {
         listaVoos.add(voo);
     }
 
-    public ArrayList<Voo> saindoDe(String origem){
-        ArrayList<Voo> listaOrigem = new ArrayList<>();
-        for(Voo i: listaVoos){
-            if(i.getOrigem().equals(origem)){
-                listaOrigem.add(i);
-            }
-        }
-        return listaOrigem;
+    public List<Voo> saindoDe(String origem){
+        Stream<Voo> listaOrigem = listaVoos.stream();
+
+        return listaOrigem
+                .filter(voo -> voo.getOrigem().equals(origem))
+                .collect(Collectors.toList());
     }
 
     public List<Voo> porDuracao(int duracao) {
+        Stream<Voo> listaDuracao = listaVoos.stream();
 
-        Stream<Voo> streamVoos = listaVoos.stream();
-
-        return streamVoos
+        return listaDuracao
                 .filter(voo -> voo.getMinutosVoo() == duracao)
                 .collect(Collectors.toList());
     }
 
-    public ArrayList<Voo> chegandoEm(String destino){
-        ArrayList<Voo> listaDestino = new ArrayList<>();
-        for(Voo i: listaVoos){
-            if(i.getDestino().equals(destino)){
-                listaDestino.add(i);
-            }
-        }
-        return listaDestino;
+    public List<Voo> chegandoEm(String destino){
+        Stream<Voo> listaDestino = listaVoos.stream();
+
+        return listaDestino
+                .filter(voo -> voo.getDestino() == destino)
+                .collect(Collectors.toList());
     }
 
-    public ArrayList<Voo> operadoPor(String equipamento){
-        ArrayList<Voo> equipamentoLista = new ArrayList<>();
-        for(Voo i: listaVoos){
-            if(i.getEquipamento().equals(equipamento)){
-                equipamentoLista.add(i);
-            }
-        }
-        return equipamentoLista;
+    public List<Voo> operadoPor(String equipamento){
+        Stream<Voo> listaEquipamento = listaVoos.stream();
+
+        return listaEquipamento
+                .filter(voo -> voo.getEquipamento() == equipamento)
+                .collect(Collectors.toList());
     }
 
     @Override
